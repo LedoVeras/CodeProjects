@@ -1,4 +1,6 @@
-
+body {
+    background-color: bisque;
+}
 
 div {
     border-radius: 10px;
@@ -14,24 +16,29 @@ div {
     box-sizing: border-box;
 }
 
-.horizontal {
+.horizontal, .vertical{
     display: flex;
-    flex-direction: column;
     align-items: stretch;
     padding: 10px;
+    box-sizing: border-box;
+
+}
+
+.horizontal {
+    flex-direction: column;
     padding-bottom: 0px;
+    background-color: red;
+
 }
 
 .vertical {
-    display: flex;
     flex-direction: row;
-    align-items: stretch;
-    padding: 10px;
     padding-left: 0px;
+    background-color: black;
+
 }
 
 .horizontal > div , .vertical > div{
-    background-color: black;
     width: 100%;
     height: 100%;
 }
@@ -42,8 +49,4 @@ div {
 
 .vertical > div{
     margin-left: 10px;
-}
-
-.test{
-    background-color: red;
 }
