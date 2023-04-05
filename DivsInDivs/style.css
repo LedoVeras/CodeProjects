@@ -1,0 +1,44 @@
+
+
+div {
+    border-radius: 10px;
+}
+
+#middle{
+    background-color: aqua;
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    margin-top: 25ch;
+
+    box-sizing: border-box;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 10px 0px 10px;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 10px 10px 10px 0px;
+}
+
+
+.horizontal > div , .vertical > div{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.horizontal > div{
+    margin-bottom: 10px;
+}
+
+.vertical > div{
+    margin-left: 10px;
+}
