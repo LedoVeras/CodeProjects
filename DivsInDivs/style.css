@@ -18,16 +18,17 @@ div {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 10px 10px 0px 10px;
+    padding: 10px;
+    padding-bottom: 0px;
 }
 
 .vertical {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    padding: 10px 10px 10px 0px;
+    padding: 10px;
+    padding-left: 0px;
 }
-
 
 .horizontal > div , .vertical > div{
     background-color: black;
@@ -41,4 +42,8 @@ div {
 
 .vertical > div{
     margin-left: 10px;
+}
+
+.test{
+    background-color: red;
 }
