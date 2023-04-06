@@ -13,13 +13,28 @@ for (let i = 0; i < listV.length; i++) {
     divList.push(listV[i]);
 }
 
+var classes = ["horizontal" , "vertical"]
+
+
+addDivEvent = function(element){
+    element.addEventListener("click", (event) => 
+    {
+        event.stopPropagation();
+        
+        let curClass = element.className;
+        let nextClass = classes[Math.abs(1 - classes.indexOf(curClass))];
+
+        let childDiv = document.createElement("div");
+        childDiv.className = nextClass
+
+        element.appendChild(childDiv);
+
+        addDivEvent(childDiv);
+    }, false);
+}
+
 
 divList.forEach(el => {
-    el.addEventListener("click", () => 
-    {
-        console.log("bah");
-    }, false);
+    addDivEvent(el);
 });
 
-
-var classes = ["horizontal" , "vertical"]
